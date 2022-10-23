@@ -22,5 +22,14 @@ enum Color {Red, Green, Blue};
 let background = Color.Blue
 console.log(background); */
 var msg = "abc";
-var x = msg.endsWith("c");
-console.log(x);
+//let x = msg.endsWith("c");
+//console.log(x)
+var myname;
+var age;
+var random;
+var person = {
+    myname: "Isaac"
+};
+myname = "Isaac";
+age = 24;
+console.log(myname, age, person);
