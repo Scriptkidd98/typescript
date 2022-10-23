@@ -23,6 +23,23 @@ enum Color {Red, Green, Blue};
 let background = Color.Blue
 console.log(background); */
 
-let msg = "abc"
-let x = msg.endsWith("c");
-console.log(x)
+let msg = "abc";
+//let x = msg.endsWith("c");
+//console.log(x)
+
+let myname: string; //declaring variable types
+let age: number;
+let random: any;
+
+type Person  = {
+  myname: string,
+}
+
+let person: Person = {
+  myname: "Anon",
+}
+
+myname = "Anon"; //initializing variables with their respective types
+age = 24;
+
+console.log(myname, age, person);
