@@ -31,11 +31,11 @@ let myname: string; //declaring variable types
 let age: number;
 let random: any;
 
-type Person  = {
+type Person  = { //declaring object type as blueprint
   myname: string,
 }
 
-let person: Person = {
+let person: Person = { //assiging object blueprint to variable
   myname: "Anon",
 }
 
