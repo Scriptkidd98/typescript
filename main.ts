@@ -43,3 +43,21 @@ myname = "Anon"; //initializing variables with their respective types
 age = 24;
 
 console.log(myname, age, person);
+
+type x = {
+  a: string,
+  b: number,
+}
+type y = x & {
+  c: string,
+  d: number,
+}
+
+let y: y = {
+  a:"one",
+  b:1,
+  c:"two",
+  d:2,
+}
+
+console.log(y)
