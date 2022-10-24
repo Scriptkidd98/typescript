@@ -24,12 +24,19 @@ console.log(background); */
 var msg = "abc";
 //let x = msg.endsWith("c");
 //console.log(x)
-var myname;
+var myname; //declaring variable types
 var age;
 var random;
 var person = {
-    myname: "Isaac"
+    myname: "Anon"
 };
-myname = "Isaac";
+myname = "Anon"; //initializing variables with their respective types
 age = 24;
 console.log(myname, age, person);
+var y = {
+    a: "one",
+    b: 1,
+    c: "two",
+    d: 2
+};
+console.log(y);
