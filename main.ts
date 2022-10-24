@@ -61,3 +61,14 @@ let y: y = {
 }
 
 console.log(y)
+
+interface Persons {
+  name: string,
+  age: number,
+}
+interface Guy extends Person {
+  role: string,
+}
+type guy = Persons & {
+  role: string,
+}
