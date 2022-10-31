@@ -72,3 +72,19 @@ interface Guy extends Person {
 type guy = Persons & {
   role: string,
 }
+let aname: string;
+let anage: number;
+let arandom: any;
+
+type Personas  = {
+  name: string,
+}
+
+let personas: Personas = {
+  name: "John Doe",
+}
+
+aname = "John Doe";
+anage = 24;
+
+console.log(person)
