@@ -40,3 +40,12 @@ var y = {
     d: 2
 };
 console.log(y);
+var aname;
+var anage;
+var arandom;
+var personas = {
+    name: "John Doe"
+};
+aname = "John Doe";
+anage = 24;
+console.log(person);
