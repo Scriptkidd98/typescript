@@ -4,7 +4,7 @@
 log("Hello World!");
 
 function doSomething() {
-    for(let i = 0; i < 5; i++) { //let is a block scoped variable. var on the other hand is functionally scoped. that means it can be accessed all through the function, which can cause problems
+    for(let i = 0; i < 5; i++) { //let is a block scoped variable. var on the other hand is functionally scoped. that means it can be accessed all through the function, which can cause problems if it's initialized anywhere else
         console.log(i);
     }
     //console.log(i); if i is var instead of let, we would be able to access the i variable here
@@ -88,3 +88,21 @@ aname = "John Doe";
 anage = 24;
 
 console.log(person)
+
+type Dog = { //object type as a blueprint
+  name: string,
+  breed: string,
+  color: string,
+  age: number,
+  healthy: boolean
+}
+
+let Sophie: Dog = { //initialize the Dog object blueprint and pass to variable
+  name: 'Sophie',
+  breed: 'Caucasian',
+  color: 'Grey & Black & Brown',
+  age: 1,
+  healthy: true
+}
+
+console.log(typeof(Sophie)); //Sophie variable is an object
