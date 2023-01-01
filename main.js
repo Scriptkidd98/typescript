@@ -57,3 +57,22 @@ var Sophie = {
     healthy: true
 };
 console.log(typeof (Sophie));
+
+
+async function f() {
+    let aPromise = new Promise(function(resolve){ //aPromise creates a promise, so like 'I promise you something, just wait for 3 seconds'
+        setTimeout(() => {
+            resolve('Yo') //after 3 seconds the promise is resolved
+        }, 3000);
+    });
+    let done = await aPromise; //done waits for what aPromise promised it. after 3 seconds aPromise gives done what it promised it 
+    console.log(done)
+    console.log(await aPromise);
+}
+f();
+
+/* function test() {
+    setTimeout(() => {console.log('After 3 seconds')}, 3000);
+    console.log('Immediately')
+}
+test() */
