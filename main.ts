@@ -118,3 +118,43 @@ async function f() {
   console.log(await aPromise);
 }
 f()
+
+let anArray:number[] = [2, 9, 7, 6, 7];
+
+const getFullName = (firstName: string, lastName: string):string => { //specify the function return type
+  return firstName + " " + lastName;
+}
+console.log(getFullName('Isaac', 'Natty'))
+
+const user: {name: string; age: number} = { //creating object type with predefined property types
+  name: 'Isaac',
+  age: 1
+}
+
+interface User { //another way to create object blueprint
+  name: string,
+  age?: number, //the ? means the age property is not compulsory/mandatory
+  getName(): string //define function with return type
+}
+const user2: User = {
+  name: 'Isaac O',
+  age: 1,
+  getName() {
+      return user2.name
+  },
+}
+console.log(user2.getName())
+
+type Users = {
+  name: string,
+  age: number,
+  getName(): string
+}
+
+const user1: Users = {
+  name: 'Isaac',
+  age: 1,
+  getName() {
+    return user1.name
+  }
+}
