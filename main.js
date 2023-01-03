@@ -93,7 +93,6 @@ var Sophie = {
     healthy: true
 };
 console.log(typeof (Sophie)); //Sophie variable is an object
-
 function f() {
     return __awaiter(this, void 0, void 0, function () {
         var aPromise, done, _a, _b;
@@ -119,16 +118,27 @@ function f() {
     });
 }
 f();
-
-
-/* async function f() {
-    let aPromise = new Promise<string>(function(resolve){ //aPromise creates a promise, so like 'I promise you something, just wait for 3 seconds'
-      setTimeout(() => {
-        resolve('Yo') //after 3 seconds the promise is resolved
-      }, 3000);
-    });
-    let done = await aPromise; //done waits for what aPromise promised it. after 3 seconds aPromise gives done what it promised it 
-    console.log(done);
-    console.log(await aPromise);
-  }
-  f() */
+var anArray = [2, 9, 7, 6, 7];
+var getFullName = function (firstName, lastName) {
+    return firstName + " " + lastName;
+};
+console.log(getFullName('Isaac', 'Natty'));
+var user = {
+    name: 'Isaac',
+    age: 1
+};
+var user2 = {
+    name: 'Isaac O',
+    age: 1,
+    getName: function () {
+        return user2.name;
+    }
+};
+console.log(user2.getName());
+var user1 = {
+    name: 'Isaac',
+    age: 1,
+    getName: function () {
+        return user1.name;
+    }
+};
