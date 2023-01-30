@@ -42,7 +42,7 @@ let person: Person = { //assiging object blueprint to variable
 myname = "Anon"; //initializing variables with their respective types
 age = 24;
 
-console.log(myname, age, person);
+//console.log(myname, age, person);
 
 type x = {
   a: string,
@@ -60,7 +60,7 @@ let y: y = {
   d:2,
 }
 
-console.log(y)
+//console.log(y)
 
 interface Persons {
   name: string,
@@ -87,7 +87,7 @@ let personas: Personas = {
 aname = "John Doe";
 anage = 24;
 
-console.log(person)
+//console.log(person)
 
 type Dog = { //object type as a blueprint
   name: string,
@@ -105,9 +105,9 @@ let Sophie: Dog = { //initialize the Dog object blueprint and pass to variable
   healthy: true
 }
 
-console.log(typeof(Sophie)); //Sophie variable is an object
+//console.log(typeof(Sophie)); //Sophie variable is an object
 
-async function f() {
+/* async function f() {
   let aPromise = new Promise<string>(function(resolve){ //aPromise creates a promise, so like 'I promise you something, just wait for 3 seconds'
     setTimeout(() => {
       resolve('Yo') //after 3 seconds the promise is resolved
@@ -117,16 +117,19 @@ async function f() {
   console.log(done);
   console.log(await aPromise);
 }
-f()
+f() */
 
 let anArray:number[] = [2, 9, 7, 6, 7];
+anArray.map((data) => {
+  //console.log(data)
+})
 
-const getFullName = (firstName: string, lastName: string):string => { //specify the function return type
+const getFullName = (firstName: string, lastName: string): string => { //specify the function return type
   return firstName + " " + lastName;
 }
-console.log(getFullName('Isaac', 'Natty'))
+//console.log(getFullName('Isaac', 'Natty'))
 
-const user: {name: string; age: number} = { //creating object type with predefined property types
+const user: {name: string, age: number} = { //creating object, with object type and predefined property types
   name: 'Isaac',
   age: 1
 }
@@ -143,18 +146,41 @@ const user2: User = {
       return user2.name
   },
 }
-console.log(user2.getName())
+//console.log(user2.getName())
 
 type Users = {
-  name: string,
-  age: number,
-  getName(): string
+  name?: string,
+  age?: number,
+  dob: number,
+  accountType?: string,
+  setName(name: string): void;
+  calcAge(currentYear: number): void;
+  setAccountType(): void;
 }
 
 const user1: Users = {
-  name: 'Isaac',
-  age: 1,
-  getName() {
-    return user1.name
+  dob: 1987,
+  setName(name) {
+    this.name = name;
+  },
+  calcAge(currentYear) {
+    this.age = currentYear - user1.dob
+  },
+  setAccountType() {
+    this.age >= 18 ? this.accountType = 'Adult' : this.accountType = 'Minor'
   }
 }
+const createUser = (name: string, currentYear: number) => {
+  user1.setName(name);
+  user1.calcAge(currentYear);
+  user1.setAccountType();
+}
+createUser('David', 2023)
+
+console.log(user1.name);
+console.log(user1.age);
+console.log(user1.accountType);
+
+const dstArray:string[] = ['One', 'Two', 'Three', 'Four']
+const [one, two, three, four] = dstArray;
+//console.log(one);
