@@ -107,4 +107,18 @@ console.log(user1.age);
 console.log(user1.accountType);
 var dstArray = ['One', 'Two', 'Three', 'Four'];
 var one = dstArray[0], two = dstArray[1], three = dstArray[2], four = dstArray[3];
-//console.log(one);
+var buttonStyle = {
+    height: "50px",
+    width: "Twentypx"
+};
+console.log(typeof (buttonStyle));
+console.log("Height is " + buttonStyle.height + " and width is " + buttonStyle.width);
+var aFunction = function (name, job) {
+};
+var userOne = null;
+console.log("Initial userone is " + userOne);
+userOne = {
+    name: 'Isaac',
+    age: 24
+};
+console.log("Final userone is " + userOne.name);
