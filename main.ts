@@ -136,7 +136,7 @@ const user: {name: string, age: number} = { //creating object, with object type 
 
 interface User { //another way to create object blueprint
   name: string,
-  age?: number, //the ? means the age property is not compulsory/mandatory
+  age?: number, //the ? means the age property is not compulsory/mandatory to initialize
   getName(): string //define function with return type
 }
 const user2: User = {
@@ -184,3 +184,44 @@ console.log(user1.accountType);
 const dstArray:string[] = ['One', 'Two', 'Three', 'Four']
 const [one, two, three, four] = dstArray;
 //console.log(one);
+
+type styles = {
+  height: `${number}px`,
+  width?: `${number}px` | `${string}px`, //this means the type can either be number or string. | is called a union operator
+}
+
+interface StylesInterface {
+  height: `${number}px`,
+  width?: `${number}px` | `${string}px`,
+}
+
+let buttonStyleOne: styles = {
+  height: `50px`,
+  width: `50px`,
+}
+
+let buttonStyleTwo: StylesInterface = {
+  height: `50px`,
+  width: `50px`,
+}
+
+console.log("Height is " + buttonStyleOne.height + " and width is " + buttonStyleOne.width);
+
+const aFunction = (name: string, job: string) => {
+
+}
+
+interface UserInterface {
+  name: string
+  age: number
+}
+
+let userOne: UserInterface | null = null;
+
+console.log("Initial userone is " + userOne);
+
+userOne = {
+  name: 'Isaac',
+  age: 24
+}
+console.log("Final userone is " + userOne.name)
