@@ -224,4 +224,5 @@ userOne = {
   name: 'Isaac',
   age: 24
 }
-console.log("Final userone is " + userOne.name)
+console.log("Final userone is " + userOne.name);
+
